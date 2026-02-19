@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -42,9 +41,6 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
 }
 
 :root {
@@ -119,10 +115,37 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
-    @apply bg-background text-foreground;
   }
+}
+
+/* Ripple effect animation */
+@keyframes cell-ripple {
+  0% {
+    scale: 1;
+    opacity: 0.4;
+  }
+  50% {
+    scale: 0.85;
+    opacity: 0.9;
+  }
+  100% {
+    scale: 1;
+    opacity: 0.4;
+  }
+}
+
+.animate-cell-ripple {
+  animation: cell-ripple var(--duration, 500ms) ease-out var(--delay, 0ms);
+}
+
+/* 3D Transform and Perspective for CometCard */
+.perspective-distant {
+  perspective: 2000px;
+}
+
+.transform-3d {
+  transform-style: preserve-3d;
 }
