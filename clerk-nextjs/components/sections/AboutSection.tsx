@@ -22,14 +22,18 @@ export async function AboutSection() {
   }
 
   return (
-    <section id="about" className="py-20 px-6">
+    <section id="about" className="py-12 sm:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
-          <p className="text-xl text-muted-foreground">Get to know me better</p>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
+            About Me
+          </h2>
+          <p className="text-lg sm:text-xl text-muted-foreground">
+            Get to know me better
+          </p>
         </div>
 
-        <div className="prose prose-lg dark:prose-invert max-w-none">
+        <div className="prose prose-sm sm:prose-base md:prose-lg dark:prose-invert max-w-none">
           {profile.fullBio && (
             <PortableText
               value={profile.fullBio}

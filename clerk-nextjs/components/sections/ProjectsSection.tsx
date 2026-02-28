@@ -24,17 +24,19 @@ export async function ProjectsSection() {
   }
 
   return (
-    <section id="projects" className="py-20 px-6 bg-muted/30">
+    <section id="projects" className="py-12 sm:py-20 px-4 sm:px-6 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground">Some of my best work</p>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
+            Some of my best work
+          </p>
         </div>
 
         <div className="@container">
-          <div className="grid grid-cols-1 @2xl:grid-cols-2 @5xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:@2xl:grid-cols-2 @5xl:grid-cols-3 gap-6 sm:gap-8">
             {projects.map((project) => (
               <div
                 key={project.slug?.current}

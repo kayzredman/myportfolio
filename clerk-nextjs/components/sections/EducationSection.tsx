@@ -38,7 +38,7 @@ export async function EducationSection() {
   return (
     <section
       id="education"
-      className="relative py-20 px-6 bg-muted/30 overflow-hidden"
+      className="relative py-12 sm:py-20 px-4 sm:px-6 bg-muted/30 overflow-hidden"
     >
       {/* Section-wide Dotted Glow Background */}
       {/* <DottedGlowBackground
@@ -57,21 +57,23 @@ export async function EducationSection() {
       /> */}
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Education</h2>
-          <p className="text-xl text-muted-foreground">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
+            Education
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             My academic background
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
           {education.map((edu) => (
             <div
               key={`${edu.institution}-${edu.degree}-${edu.startDate}`}
               className="group relative bg-card border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               {/* Accent gradient bar */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary/60 to-primary/30 z-10" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-primary to-primary/30 z-10" />
 
               <div className="relative z-10 p-6">
                 {/* Header with logo and basic info */}

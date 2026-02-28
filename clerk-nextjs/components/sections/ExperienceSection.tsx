@@ -36,27 +36,27 @@ export async function ExperienceSection() {
   };
 
   return (
-    <section id="experience" className="py-20 px-6">
+    <section id="experience" className="py-12 sm:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
             Work Experience
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             My professional journey
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {experiences.map((exp) => (
             <div
               key={`${exp.company}-${exp.position}-${exp.startDate}`}
-              className="relative pl-8 pb-8 border-l-2 border-muted last:border-l-0"
+              className="relative pl-6 sm:pl-8 pb-6 sm:pb-8 border-l-2 border-muted last:border-l-0"
             >
               {/* Timeline dot */}
-              <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background" />
+              <div className="absolute -left-2.25 top-0 w-4 h-4 rounded-full bg-primary border-4 border-background" />
 
-              <div className="@container/card bg-card border rounded-lg p-4 @md/card:p-6 hover:shadow-lg transition-shadow">
+              <div className="@container/card bg-card border rounded-lg p-3 @md/card:p-6 hover:shadow-lg transition-shadow">
                 <div className="flex flex-col @md/card:flex-row @md/card:items-start gap-4 mb-4">
                   {exp.companyLogo && (
                     <div className="relative w-12 h-12 @md/card:w-16 @md/card:h-16 rounded-lg overflow-hidden border shrink-0">

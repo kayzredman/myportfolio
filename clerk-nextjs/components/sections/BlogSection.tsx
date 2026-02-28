@@ -33,19 +33,19 @@ export async function BlogSection() {
   };
 
   return (
-    <section id="blog" className="py-20 px-6 bg-muted/30">
+    <section id="blog" className="py-12 sm:py-20 px-4 sm:px-6 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
             Latest Blog Posts
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Thoughts, tutorials, and insights
           </p>
         </div>
 
         <div className="@container">
-          <div className="grid grid-cols-1 @2xl:grid-cols-2 @5xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 @2xl:grid-cols-2 @5xl:grid-cols-3 gap-6 sm:gap-8">
             {posts.map((post) => (
               <article
                 key={post.slug?.current}

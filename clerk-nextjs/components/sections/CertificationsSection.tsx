@@ -45,20 +45,20 @@ export async function CertificationsSection() {
   return (
     <section
       id="certifications"
-      className="py-20 px-6 bg-gradient-to-b from-background via-muted/20 to-background"
+      className="py-12 sm:py-20 px-4 sm:px-6 bg-linear-to-b from-background via-muted/20 to-background"
     >
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
             Certifications
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Professional credentials and certifications
           </p>
         </div>
 
         <div className="@container">
-          <div className="grid grid-cols-1 @2xl:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 @2xl:grid-cols-2 gap-6 sm:gap-10">
             {certifications.map((cert) => (
               <CometCard
                 key={`${cert.issuer}-${cert.name}-${cert.issueDate}`}
@@ -74,7 +74,7 @@ export async function CertificationsSection() {
                   }}
                 >
                   {/* Inner Certificate - Dark Background */}
-                  <div className="relative bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 dark:from-zinc-950 dark:via-black dark:to-zinc-950 border-2 border-yellow-600/40 p-8 flex flex-col min-h-[450px]">
+                  <div className="relative bg-linear-to-br from-zinc-900 via-zinc-900 to-zinc-950 dark:from-zinc-950 dark:via-black dark:to-zinc-950 border-2 border-yellow-600/40 p-8 flex flex-col min-h-112.5">
                     {/* Decorative Corner Frames - Top Left */}
                     <div className="absolute top-0 left-0 w-20 h-20">
                       <div className="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2 border-yellow-600/60" />

@@ -43,10 +43,10 @@ export async function TestimonialsSection() {
   }));
 
   return (
-    <section id="testimonials" className="py-20 px-6">
+    <section id="testimonials" className="py-12 sm:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
             Client Testimonials
           </h2>
           <p className="text-xl text-muted-foreground">

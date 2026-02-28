@@ -69,22 +69,26 @@ export async function ServicesSection() {
   const regular = services.filter((s) => !s.featured);
 
   return (
-    <section id="services" className="py-20 px-6">
+    <section id="services" className="py-12 sm:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Services</h2>
-          <p className="text-xl text-muted-foreground">What I can do for you</p>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
+            Services
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
+            What I can do for you
+          </p>
         </div>
 
         {/* Featured Services */}
         {featured.length > 0 && (
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-              <Star className="w-6 h-6 text-yellow-500 fill-yellow-500" />
+          <div className="mb-8 sm:mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2">
+              <Star className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 fill-yellow-500" />
               Featured Services
             </h3>
             <div className="@container">
-              <div className="grid grid-cols-1 @3xl:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 @3xl:grid-cols-2 gap-6 sm:gap-8">
                 {featured.map((service) => (
                   <div
                     key={service.slug?.current || service.title}
@@ -128,7 +132,7 @@ export async function ServicesSection() {
                               key={`${service.title}-feature-${idx}`}
                               className="flex items-start gap-2"
                             >
-                              <IconCheck className="w-4 h-4 @md/card:w-5 @md/card:h-5 text-primary mt-0.5 flex-shrink-0" />
+                              <IconCheck className="w-4 h-4 @md/card:w-5 @md/card:h-5 text-primary mt-0.5 shrink-0" />
                               <span className="text-muted-foreground text-sm @md/card:text-base">
                                 {feature}
                               </span>
@@ -226,7 +230,7 @@ export async function ServicesSection() {
                             key={`${service.title}-feature-${idx}`}
                             className="flex items-start gap-2 text-xs @md/card:text-sm"
                           >
-                            <IconCheck className="w-3.5 h-3.5 @md/card:w-4 @md/card:h-4 text-primary mt-0.5 flex-shrink-0" />
+                            <IconCheck className="w-3.5 h-3.5 @md/card:w-4 @md/card:h-4 text-primary mt-0.5 shrink-0" />
                             <span className="text-muted-foreground line-clamp-2">
                               {feature}
                             </span>
