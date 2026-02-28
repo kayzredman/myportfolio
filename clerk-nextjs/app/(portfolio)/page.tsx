@@ -1,9 +1,10 @@
+import { SidebarInset } from "@/components/ui/sidebar";
 import PortfolioContent from "@/components/PortfolioContent";
 
 export default async function Home() {
   return (
-    <main className="min-h-screen">
+    <SidebarInset>
       <PortfolioContent />
-    </main>
+    </SidebarInset>
   );
 }
